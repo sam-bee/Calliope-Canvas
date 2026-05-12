@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import TitleSlide from './slides/TitleSlide';
 import PlaceholderSlide from './slides/PlaceholderSlide';
 import InteractiveFiberDebuggerSlide from './slides/InteractiveFiberDebuggerSlide';
+import PackagistExtensionPieChartSlide from './slides/PackagistExtensionPieChartSlide';
 import Footer from './components/Footer';
 
 type SlideDefinition = {
@@ -34,6 +35,14 @@ const slides: SlideDefinition[] = [
       'Describe an interactive diagram to a coding agent, and bring your slides to life',
     ],
     title: 'Ask a coding agent for an interactive slide',
+  },
+  {
+    content: <PackagistExtensionPieChartSlide />,
+    notes: [
+      'Use a local file scan as source data, then turn it into a chart slide.',
+      'The Packagist repository snapshot contains 15,598 files across 59 extension groups.',
+    ],
+    title: 'Turn local data into a chart',
   },
 ];
 
