@@ -10,65 +10,11 @@ type ChartSlice = ExtensionCount & {
 };
 
 const extensionCounts: ExtensionCount[] = [
-  { extension: 'php', count: 13373 },
+  { extension: 'rb', count: 13373 },
   { extension: 'md', count: 449 },
   { extension: '[no extension]', count: 354 },
   { extension: 'json', count: 294 },
   { extension: 'xlf', count: 197 },
-  { extension: 'twig', count: 185 },
-  { extension: 'stub', count: 141 },
-  { extension: 'html', count: 73 },
-  { extension: 'svg', count: 72 },
-  { extension: 'meta', count: 64 },
-  { extension: 'xsd', count: 52 },
-  { extension: 'txt', count: 42 },
-  { extension: 'yml', count: 40 },
-  { extension: 'yaml', count: 34 },
-  { extension: 'xliff', count: 32 },
-  { extension: 'dist', count: 30 },
-  { extension: 'neon', count: 19 },
-  { extension: 'rst', count: 19 },
-  { extension: 'css', count: 15 },
-  { extension: 'js', count: 15 },
-  { extension: 'sample', count: 14 },
-  { extension: 'lock', count: 11 },
-  { extension: 'xml', count: 10 },
-  { extension: 'tpl', count: 7 },
-  { extension: 'png', count: 6 },
-  { extension: 'woff2', count: 6 },
-  { extension: 'sh', count: 5 },
-  { extension: 'log', count: 3 },
-  { extension: 'phar', count: 3 },
-  { extension: '0', count: 2 },
-  { extension: 'gif', count: 2 },
-  { extension: 'ttf', count: 2 },
-  { extension: 'asc', count: 1 },
-  { extension: 'base64', count: 1 },
-  { extension: 'bash', count: 1 },
-  { extension: 'csv', count: 1 },
-  { extension: 'dev', count: 1 },
-  { extension: 'eot', count: 1 },
-  { extension: 'exe', count: 1 },
-  { extension: 'fish', count: 1 },
-  { extension: 'ico', count: 1 },
-  { extension: 'idx', count: 1 },
-  { extension: 'jpg', count: 1 },
-  { extension: 'jsx', count: 1 },
-  { extension: 'legacy', count: 1 },
-  { extension: 'markdown', count: 1 },
-  { extension: 'nix', count: 1 },
-  { extension: 'osd', count: 1 },
-  { extension: 'pack', count: 1 },
-  { extension: 'pem', count: 1 },
-  { extension: 'rev', count: 1 },
-  { extension: 'scss', count: 1 },
-  { extension: 'ser', count: 1 },
-  { extension: 'sync-conflict-20260510-021359-yivs4nb', count: 1 },
-  { extension: 'template', count: 1 },
-  { extension: 'test', count: 1 },
-  { extension: 'toml', count: 1 },
-  { extension: 'woff', count: 1 },
-  { extension: 'zsh', count: 1 },
 ];
 
 const sliceColors = [
@@ -77,34 +23,13 @@ const sliceColors = [
   '#f59e0b',
   '#f472b6',
   '#a78bfa',
-  '#fb7185',
-  '#22c55e',
-  '#f97316',
-  '#06b6d4',
-  '#eab308',
-  '#818cf8',
-  '#2dd4bf',
-  '#94a3b8',
 ];
 
-const visibleSliceCount = 12;
 const totalFiles = extensionCounts.reduce((sum, item) => sum + item.count, 0);
-const visibleExtensions = extensionCounts.slice(0, visibleSliceCount);
-const otherCount = extensionCounts
-  .slice(visibleSliceCount)
-  .reduce((sum, item) => sum + item.count, 0);
-
-const chartData: ChartSlice[] = [
-  ...visibleExtensions.map((item, index) => ({
-    ...item,
-    color: sliceColors[index],
-  })),
-  {
-    extension: 'Other',
-    count: otherCount,
-    color: sliceColors[visibleSliceCount],
-  },
-];
+const chartData: ChartSlice[] = extensionCounts.map((item, index) => ({
+  ...item,
+  color: sliceColors[index],
+}));
 
 const formatCount = (count: number) => count.toLocaleString('en-US');
 
@@ -168,7 +93,7 @@ const PackagistExtensionPieChartSlide: React.FC = () => {
         </p>
 
         <h2 className="mt-5 text-5xl font-extrabold leading-tight text-white md:text-6xl">
-          Packagist file extensions
+          Ask an agent to look at files on your computer, and create graphs
         </h2>
 
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">

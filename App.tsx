@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import TitleSlide from './slides/TitleSlide';
-import PlaceholderSlide from './slides/PlaceholderSlide';
+import CalliopeCreatorSlide from './slides/CalliopeCreatorSlide';
 import InteractiveFiberDebuggerSlide from './slides/InteractiveFiberDebuggerSlide';
 import PackagistExtensionPieChartSlide from './slides/PackagistExtensionPieChartSlide';
 import Footer from './components/Footer';
@@ -22,12 +22,12 @@ const slides: SlideDefinition[] = [
     title: 'Calliope Canvas',
   },
   {
-    content: <PlaceholderSlide />,
+    content: <CalliopeCreatorSlide />,
     notes: [
-      'Replace this placeholder with the next slide in your presentation.',
-      'Speaker notes can contain reminders, transitions, or extra context.',
+      'Credit Kirti B as the creator of Calliope Canvas.',
+      'Describe Calliope Canvas as an AI first presentation tool.',
     ],
-    title: 'Add your slide here',
+    title: 'Created by Kirti B',
   },
   {
     content: <InteractiveFiberDebuggerSlide />,
@@ -39,10 +39,9 @@ const slides: SlideDefinition[] = [
   {
     content: <PackagistExtensionPieChartSlide />,
     notes: [
-      'Use a local file scan as source data, then turn it into a chart slide.',
-      'The Packagist repository snapshot contains 15,598 files across 59 extension groups.',
+      'You can ask an agent to analyse files or project folders on your computer and produce graphs from what it finds.',
     ],
-    title: 'Turn local data into a chart',
+    title: 'Ask an agent to look at files on your computer, and create graphs',
   },
 ];
 
