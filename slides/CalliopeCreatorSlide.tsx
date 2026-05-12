@@ -26,7 +26,7 @@ const CalliopeCreatorSlide: React.FC = () => {
             Created by Kirti Bhardwaaj, with demo slides by Sam Burns.
           </p>
           <p className="mt-8 text-lg font-semibold uppercase tracking-[0.2em] text-slate-500">
-            Demo slides by Sam Burns
+            As seen at the London Ruby Usergroup
           </p>
         </div>
       </div>

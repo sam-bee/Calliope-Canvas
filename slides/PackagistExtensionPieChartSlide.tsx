@@ -93,7 +93,7 @@ const PackagistExtensionPieChartSlide: React.FC = () => {
         </p>
 
         <h2 className="mt-5 text-5xl font-extrabold leading-tight text-white md:text-6xl">
-          Ask an agent to look at files on your computer, and create graphs
+          Ask an agent to scan your files, create graphs
         </h2>
 
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">

@@ -2,7 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import TitleSlide from './slides/TitleSlide';
 import CalliopeCreatorSlide from './slides/CalliopeCreatorSlide';
 import InteractiveFiberDebuggerSlide from './slides/InteractiveFiberDebuggerSlide';
+import LocalSetupSlide from './slides/LocalSetupSlide';
 import PackagistExtensionPieChartSlide from './slides/PackagistExtensionPieChartSlide';
+import SpeakerNotesFeatureSlide from './slides/SpeakerNotesFeatureSlide';
+import VoiceActivationFeatureSlide from './slides/VoiceActivationFeatureSlide';
 import Footer from './components/Footer';
 
 type SlideDefinition = {
@@ -25,9 +28,32 @@ const slides: SlideDefinition[] = [
     content: <CalliopeCreatorSlide />,
     notes: [
       'Credit Kirti B as the creator of Calliope Canvas.',
-      'Describe Calliope Canvas as an AI first presentation tool.',
     ],
     title: 'Created by Kirti B',
+  },
+  {
+    content: <LocalSetupSlide />,
+    notes: [
+      'Start by cloning the LostWarrior Calliope Canvas repository and running it locally.',
+      'The development flow is npm install, npm run dev, then present from localhost on your laptop.',
+    ],
+    title: 'Run it locally',
+  },
+  {
+    content: <SpeakerNotesFeatureSlide />,
+    notes: [
+      'Speaker notes let the presenter keep prompts and transitions separate from the audience-facing slide.',
+      '[Open the Notes window here if it is not already visible.]',
+    ],
+    title: 'Speaker notes',
+  },
+  {
+    content: <VoiceActivationFeatureSlide />,
+    notes: [
+      'Voice activation lets the presenter drive the deck without reaching for the keyboard.',
+      '[Try saying Next Slide if microphone access is enabled.]',
+    ],
+    title: 'Voice activation',
   },
   {
     content: <InteractiveFiberDebuggerSlide />,
@@ -41,7 +67,7 @@ const slides: SlideDefinition[] = [
     notes: [
       'You can ask an agent to analyse files or project folders on your computer and produce graphs from what it finds.',
     ],
-    title: 'Ask an agent to look at files on your computer, and create graphs',
+    title: 'Ask an agent to scan your files, create graphs',
   },
 ];
 

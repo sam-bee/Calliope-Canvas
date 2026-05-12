@@ -78,11 +78,11 @@ const InteractiveFiberDebuggerSlide: React.FC = () => {
     <div className="flex min-h-[70vh] items-center justify-center px-6 py-10">
       <div className="w-full max-w-6xl rounded-lg border border-slate-700 bg-slate-950 px-10 py-14 shadow-2xl md:px-14 md:py-18">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-300">
-          Interactive fiber example
+          Interactive code example
         </p>
 
         <h2 className="mt-5 text-5xl font-extrabold leading-tight text-white md:text-6xl">
-          Ask a coding agent for an interactive slide
+          Why not ask a coding agent for an interactive diagram?
         </h2>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-[1.3fr_1fr]">
