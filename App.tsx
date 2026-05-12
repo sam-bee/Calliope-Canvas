@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import TitleSlide from './slides/TitleSlide';
 import PlaceholderSlide from './slides/PlaceholderSlide';
+import InteractiveFiberDebuggerSlide from './slides/InteractiveFiberDebuggerSlide';
 import Footer from './components/Footer';
 
 type SlideDefinition = {
@@ -26,6 +27,13 @@ const slides: SlideDefinition[] = [
       'Speaker notes can contain reminders, transitions, or extra context.',
     ],
     title: 'Add your slide here',
+  },
+  {
+    content: <InteractiveFiberDebuggerSlide />,
+    notes: [
+      'Describe an interactive diagram to a coding agent, and bring your slides to life',
+    ],
+    title: 'Ask a coding agent for an interactive slide',
   },
 ];
 
