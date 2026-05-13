@@ -32,14 +32,6 @@ const slides: SlideDefinition[] = [
     title: 'Created by Kirti B',
   },
   {
-    content: <LocalSetupSlide />,
-    notes: [
-      'Start by cloning the LostWarrior Calliope Canvas repository and running it locally.',
-      'The development flow is npm install, npm run dev, then present from localhost on your laptop.',
-    ],
-    title: 'Run it locally',
-  },
-  {
     content: <SpeakerNotesFeatureSlide />,
     notes: [
       'Speaker notes let the presenter keep prompts and transitions separate from the audience-facing slide.',
@@ -68,6 +60,14 @@ const slides: SlideDefinition[] = [
       'You can ask an agent to analyse files or project folders on your computer and produce graphs from what it finds.',
     ],
     title: 'Ask an agent to scan your files, create graphs',
+  },
+  {
+    content: <LocalSetupSlide />,
+    notes: [
+      'Start by cloning the LostWarrior Calliope Canvas repository and running it locally.',
+      'The development flow is npm install, npm run dev, then present from localhost on your laptop.',
+    ],
+    title: 'Run it locally',
   },
 ];
 
