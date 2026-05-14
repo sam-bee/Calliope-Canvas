@@ -3,17 +3,17 @@ import React from 'react';
 const CalliopeCreatorSlide: React.FC = () => {
   return (
     <div className="flex min-h-[70vh] items-center justify-center px-6 py-10">
-      <div className="grid w-full max-w-6xl items-center gap-10 rounded-lg border border-slate-700 bg-slate-950 px-10 py-14 shadow-2xl md:grid-cols-[0.8fr_1.2fr] md:px-14">
+      <div className="grid w-full max-w-6xl items-center gap-10 rounded-lg border border-[#2E2E1A] bg-[#141408] px-10 py-14 shadow-2xl md:grid-cols-[0.8fr_1.2fr] md:px-14">
         <div className="flex justify-center md:justify-start">
           <img
-            src="../images/logo-on-black.png"
-            alt="Calliope Canvas Logo"
-            className="h-56 w-56 rounded-full border border-slate-700 shadow-2xl"
+            src="../images/1699525139-gocardless-logo.jpg"
+            alt="GoCardless Logo"
+            className="h-56 w-56 rounded-2xl border border-[#2E2E1A] shadow-2xl"
           />
         </div>
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-300">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#E8F63C]">
             Created by Kirti B.
           </p>
           <h2 className="mt-6 text-5xl font-extrabold leading-tight text-white md:text-6xl">

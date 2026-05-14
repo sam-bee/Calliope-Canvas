@@ -32,6 +32,13 @@ const slides: SlideDefinition[] = [
     title: 'Created by Kirti B',
   },
   {
+    content: <InteractiveFiberDebuggerSlide />,
+    notes: [
+      'Describe an interactive diagram to a coding agent, and bring your slides to life',
+    ],
+    title: 'Ask a coding agent for an interactive slide',
+  },
+  {
     content: <SpeakerNotesFeatureSlide />,
     notes: [
       'Speaker notes let the presenter keep prompts and transitions separate from the audience-facing slide.',
@@ -46,13 +53,6 @@ const slides: SlideDefinition[] = [
       '[Try saying Next Slide if microphone access is enabled.]',
     ],
     title: 'Voice activation',
-  },
-  {
-    content: <InteractiveFiberDebuggerSlide />,
-    notes: [
-      'Describe an interactive diagram to a coding agent, and bring your slides to life',
-    ],
-    title: 'Ask a coding agent for an interactive slide',
   },
   {
     content: <PackagistExtensionPieChartSlide />,
@@ -209,14 +209,14 @@ const SpeakerNotesView: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 px-6 py-8 font-sans text-slate-100">
+    <div className="min-h-screen bg-[#141408] px-6 py-8 font-sans text-slate-100">
       <div className="mx-auto flex max-w-5xl flex-col gap-6">
-        <header className="flex flex-col gap-4 border-b border-slate-800 pb-5">
+        <header className="flex flex-col gap-4 border-b border-[#2A2A1A] pb-5">
           <div className="flex flex-wrap items-center gap-3">
             <button
               onClick={goToPrev}
               disabled={currentSlide === 0}
-              className="px-4 py-2 bg-slate-700 rounded-md text-white font-semibold hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="px-4 py-2 bg-[#2E2E1A] rounded-md text-slate-200 font-semibold hover:bg-[#3a3a24] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               Previous
             </button>
@@ -226,13 +226,13 @@ const SpeakerNotesView: React.FC = () => {
             <button
               onClick={goToNext}
               disabled={currentSlide === slides.length - 1}
-              className="px-4 py-2 bg-sky-600 rounded-md text-white font-semibold hover:bg-sky-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="px-4 py-2 bg-[#E8F63C] rounded-md text-[#141408] font-semibold hover:bg-[#d4e030] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               Next
             </button>
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-300">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#E8F63C]">
               Speaker Notes
             </p>
             <h1 className="mt-2 text-4xl font-extrabold text-white">
@@ -242,7 +242,7 @@ const SpeakerNotesView: React.FC = () => {
         </header>
 
         <main className="grid gap-6 lg:grid-cols-[1fr_18rem]">
-          <section className="rounded-lg border border-slate-800 bg-slate-900 px-7 py-6">
+          <section className="rounded-lg border border-[#2A2A1A] bg-[#1C1A0E] px-7 py-6">
             <h2 className="text-xl font-semibold text-white">Notes</h2>
             <ul className="mt-5 space-y-4 text-2xl leading-relaxed text-slate-200">
               {getSlideNotes(currentSlideDefinition).map((note, index) => (
@@ -252,16 +252,16 @@ const SpeakerNotesView: React.FC = () => {
           </section>
 
           <aside className="flex flex-col gap-4">
-            <div className="rounded-lg border border-slate-800 bg-slate-900 px-5 py-5">
+            <div className="rounded-lg border border-[#2A2A1A] bg-[#1C1A0E] px-5 py-5">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
                 Sync
               </p>
-              <p className={`mt-3 text-lg font-semibold ${isConnected ? 'text-emerald-300' : 'text-amber-300'}`}>
+              <p className={`mt-3 text-lg font-semibold ${isConnected ? 'text-[#E8F63C]' : 'text-slate-400'}`}>
                 {isConnected ? 'Connected to deck' : 'Waiting for deck'}
               </p>
             </div>
 
-            <div className="rounded-lg border border-slate-800 bg-slate-900 px-5 py-5">
+            <div className="rounded-lg border border-[#2A2A1A] bg-[#1C1A0E] px-5 py-5">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
                 Next
               </p>
@@ -698,7 +698,7 @@ const DeckView: React.FC = () => {
   }, [isVoiceSupported]);
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center p-4 bg-slate-900 font-sans">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center p-4 bg-[#1C1A0E] font-sans">
       <main className="relative z-0 w-full max-w-7xl flex-grow flex flex-col items-center justify-center">
         <div
           className={`presentation-stage w-full ${animationsPaused ? 'animations-paused' : ''}`}

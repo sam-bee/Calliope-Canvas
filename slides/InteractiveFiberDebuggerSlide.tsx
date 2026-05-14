@@ -76,8 +76,8 @@ const InteractiveFiberDebuggerSlide: React.FC = () => {
 
   return (
     <div className="flex min-h-[70vh] items-center justify-center px-6 py-10">
-      <div className="w-full max-w-6xl rounded-lg border border-slate-700 bg-slate-950 px-10 py-14 shadow-2xl md:px-14 md:py-18">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-300">
+      <div className="w-full max-w-6xl rounded-lg border border-[#2E2E1A] bg-[#141408] px-10 py-14 shadow-2xl md:px-14 md:py-18">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#E8F63C]">
           Interactive code example
         </p>
 
@@ -86,11 +86,11 @@ const InteractiveFiberDebuggerSlide: React.FC = () => {
         </h2>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-[1.3fr_1fr]">
-          <section className="rounded-lg border border-slate-700 bg-slate-900/70 px-5 py-5">
+          <section className="rounded-lg border border-[#2E2E1A] bg-[#1C1A0E]/70 px-5 py-5">
             <h3 className="text-lg font-semibold uppercase tracking-[0.18em] text-slate-400">
               Code
             </h3>
-            <pre className="mt-4 overflow-x-auto rounded-md bg-slate-950 p-4 text-lg leading-relaxed text-slate-100">
+            <pre className="mt-4 overflow-x-auto rounded-md bg-[#141408] p-4 text-lg leading-relaxed text-slate-100">
               <code>
                 {codeLines.map((line, index) => {
                   const lineNumber = index + 1;
@@ -101,7 +101,7 @@ const InteractiveFiberDebuggerSlide: React.FC = () => {
                       key={`${lineNumber}-${line}`}
                       className={`block rounded px-3 ${
                         isActive
-                          ? 'bg-emerald-400 text-slate-950'
+                          ? 'bg-[#E8F63C] text-[#141408]'
                           : 'text-slate-300'
                       }`}
                     >
@@ -117,8 +117,8 @@ const InteractiveFiberDebuggerSlide: React.FC = () => {
           </section>
 
           <section className="flex flex-col gap-4">
-            <div className="min-h-40 rounded-lg border border-emerald-400/40 bg-emerald-400/10 px-6 py-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-200">
+            <div className="min-h-40 rounded-lg border border-[#E8F63C]/40 bg-[#E8F63C]/10 px-6 py-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#E8F63C]">
                 Current step
               </p>
               <p className="mt-4 text-2xl font-semibold leading-snug text-slate-100">
@@ -126,18 +126,18 @@ const InteractiveFiberDebuggerSlide: React.FC = () => {
               </p>
             </div>
 
-            <div className="rounded-lg border border-slate-700 bg-slate-900/70 px-6 py-5">
+            <div className="rounded-lg border border-[#2E2E1A] bg-[#1C1A0E]/70 px-6 py-5">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
                 Output
               </p>
-              <pre className="mt-4 min-h-32 rounded-md bg-slate-950 p-4 text-xl leading-relaxed text-emerald-200">
+              <pre className="mt-4 min-h-32 rounded-md bg-[#141408] p-4 text-xl leading-relaxed text-[#E8F63C]">
                 <code>{output.length > 0 ? output.join('\n') : ' '}</code>
               </pre>
             </div>
 
             <button
               onClick={advance}
-              className="rounded-md bg-emerald-500 px-6 py-4 text-xl font-extrabold text-slate-950 transition-colors hover:bg-emerald-400"
+              className="rounded-md bg-[#E8F63C] px-6 py-4 text-xl font-extrabold text-[#141408] transition-colors hover:bg-[#d4e030]"
             >
               {isComplete ? 'Start Again' : 'Advance'}
             </button>

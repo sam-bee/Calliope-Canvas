@@ -87,8 +87,8 @@ const PackagistExtensionPieChartSlide: React.FC = () => {
 
   return (
     <div className="flex min-h-[70vh] items-center justify-center px-6 py-10">
-      <div className="w-full max-w-6xl rounded-lg border border-slate-700 bg-slate-950 px-10 py-12 shadow-2xl md:px-14">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+      <div className="w-full max-w-6xl rounded-lg border border-[#2E2E1A] bg-[#141408] px-10 py-12 shadow-2xl md:px-14">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#E8F63C]">
           Local repository scan
         </p>
 
@@ -113,7 +113,7 @@ const PackagistExtensionPieChartSlide: React.FC = () => {
                     strokeWidth="2"
                   />
                 ))}
-                <circle cx="128" cy="128" fill="#020617" r="66" />
+                <circle cx="128" cy="128" fill="#141408" r="66" />
               </svg>
 
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
@@ -131,7 +131,7 @@ const PackagistExtensionPieChartSlide: React.FC = () => {
           </section>
 
           <section className="grid gap-3">
-            <div className="grid grid-cols-[1fr_auto_auto] gap-x-4 border-b border-slate-800 pb-2 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
+            <div className="grid grid-cols-[1fr_auto_auto] gap-x-4 border-b border-[#2A2A1A] pb-2 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
               <span>Extension</span>
               <span>Files</span>
               <span>Share</span>
@@ -140,7 +140,7 @@ const PackagistExtensionPieChartSlide: React.FC = () => {
             {chartData.map(slice => (
               <div
                 key={slice.extension}
-                className="grid grid-cols-[1fr_auto_auto] items-center gap-x-4 rounded-md bg-slate-900/80 px-4 py-3 text-lg text-slate-100"
+                className="grid grid-cols-[1fr_auto_auto] items-center gap-x-4 rounded-md bg-[#1C1A0E]/80 px-4 py-3 text-lg text-slate-100"
               >
                 <span className="flex min-w-0 items-center gap-3">
                   <span

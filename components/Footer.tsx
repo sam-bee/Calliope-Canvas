@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = ({
 }) => {
     return <footer className="relative z-20 w-full max-w-7xl py-4 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
         <div className="flex flex-col gap-1">
-          <div className="text-slate-400 font-semibold">Calliope Canvas</div>
+          <div className="text-[#E8F63C] font-semibold">GoCardless</div>
           {!isFullscreen && (
             <>
               <div className="text-sm text-slate-500">
@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = ({
           <button
             onClick={goToPrev}
             disabled={currentSlide === 0}
-            className="px-4 py-2 bg-slate-700 rounded-md text-white font-semibold hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="px-4 py-2 bg-[#2E2E1A] rounded-md text-slate-200 font-semibold hover:bg-[#3a3a24] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             Previous
           </button>
@@ -67,20 +67,20 @@ const Footer: React.FC<FooterProps> = ({
           <button
             onClick={goToNext}
             disabled={currentSlide === slideCount - 1}
-            className="px-4 py-2 bg-sky-600 rounded-md text-white font-semibold hover:bg-sky-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="px-4 py-2 bg-[#E8F63C] rounded-md text-[#141408] font-semibold hover:bg-[#d4e030] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             Next
           </button>
           <button
             onClick={openSpeakerNotesView}
-            className="px-4 py-2 bg-slate-700 rounded-md text-white font-semibold hover:bg-slate-600 transition-colors"
+            className="px-4 py-2 bg-[#2E2E1A] rounded-md text-slate-200 font-semibold hover:bg-[#3a3a24] transition-colors"
             title="Open speaker notes"
           >
             Notes
           </button>
           <button
             onClick={toggleFullscreen}
-            className="px-4 py-2 bg-slate-700 rounded-md text-white font-semibold hover:bg-slate-600 transition-colors"
+            className="px-4 py-2 bg-[#2E2E1A] rounded-md text-slate-200 font-semibold hover:bg-[#3a3a24] transition-colors"
             title="Toggle Fullscreen (F)"
           >
             ⛶
